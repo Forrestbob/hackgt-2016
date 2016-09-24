@@ -6,7 +6,6 @@ body {
 	
 	background-position: 0px 40px;
 	
-	
 }
 
 #logo {
@@ -38,8 +37,6 @@ body {
 #all_fields {
     font-size: 70%;
 }
-
-
 
 input[type=text], input[type=password] { 
     width: 100%;

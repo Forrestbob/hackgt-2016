@@ -31,8 +31,19 @@ def login():
   for each in results:
     if each['uuid']=='fc163a5a-7f82-11e6-bb9a-cdff87b7f965':
       user['flight_number'] = each['freqFlierNumber']
-      print user['flight_number']
-  return user['flight_number']
+      user['name'] = each['passengerName']
+      flight = {
+        ticket_number: each['ticketNumber'],
+        departure: "Hartsfield-Jackson Atlanta International Airport",
+        departure_time: "Friday August 9, 9:00pm EST",
+        destination: "Los Angeles International Airport",
+        arrival_time: "Saturday August 10, 12:00am EST"
+      }
+      if user['flight']:
+        user['flight'].append(flight)
+      else:
+        user['flight']= [flight]
+  return user.text
   
   # set flash error message and redirect to login page
 
