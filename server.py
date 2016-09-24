@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect, session, f
 from functools import wraps
 import sqlite3
 app = Flask(__name__)
-#app.database = "sample.db"
+#app.database = "DeltaDB1.db"
 #app.secret_key = "oh baby"
 import requests 
 from flask_bcrypt import Bcrypt  
@@ -16,7 +16,7 @@ def welcome():
 def login():
   username = request.form['username']
   password = request.form['password']
-  user_query = "SELECT * FROM flyers WHERE username = :username LIMIT 1"
+  user_query = "SELECT * FROM Flyers WHERE username = :username LIMIT 1"
   query_data = { 'username': username }
   user = mysql.query_db(user_query, query_data) # user will be returned in a list
   if bcrypt.check_password_hash(user[0]['password'], password):
