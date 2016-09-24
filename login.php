@@ -10,7 +10,7 @@
 	<img id = "logo" src="images/delta.png">
 	
 	<div id = "login_form">
-		<form action="login.php"  method = "GET">
+		<form action="dashboard.php"  method = "GET">
 			Username:<br>
 			<input type = "text" name = "username"><br>
 			
