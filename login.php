@@ -19,10 +19,6 @@
 
 			<span id = "custom_word">Username:</span><br>
 			<input type = "text" name = "username" placeholder="Enter SkyMiles number or username"><br>
-
-		<form action="dashboard.php"  method = "GET">
-			Username:<br>
-			<input type = "text" name = "username"><br>
 			
 			<span id = "custom_word">Password:</span><br>
 			<input type = "password" name = "password" placeholder="Enter password">
