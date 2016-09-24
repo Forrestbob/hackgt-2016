@@ -4,29 +4,33 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
 	
-	background-position: 0px 60px;
+	background-position: 0px 40px;
 	
-
+	
 }
 
 #logo {
-	margin-top: -58px;
-	margin-left: -65px;
+	width: 216px;
+	height: 86px;
+	margin-top: -36px;
+	margin-left: -30px;
 }
 
 #login_form {
-	background-color: white;
+	/*background-color:rgba(255, 255, 255, 0.7);*/
 	margin: auto;
+	margin-top: 10%;
     width: 300px;
 	border-radius: 5px;
 	padding: 20px;
+	
+	font-family: sans-serif;
 }
-
 
 input[type=text], input[type=password] { 
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 4px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -35,8 +39,8 @@ input[type=text], input[type=password] {
 
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
