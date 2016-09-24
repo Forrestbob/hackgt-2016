@@ -1,0 +1,14 @@
+body {
+
+    background-image: url("images/delta_mainbg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+	
+	background-position: 0px 60px;
+
+}
+
+#logo {
+	margin-top: -58px;
+	margin-left: -65px;
+}
