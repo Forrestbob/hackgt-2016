@@ -24,15 +24,12 @@
 		</span></h4>
 	</div>
 	
-	<div id = "large_container">
-
+	
 		<div class = "flex-container-outer">
-
 			<div class = "flex-container-inner">
 				<div class = "where_to">
 					ATL > LAX
 				</div>
-
 				<div class = "flex-item item1">
 					Flight Number:
 				</div>
@@ -49,10 +46,6 @@
 					<a href="uber_setup.php">Set Pick-up</a>
 				</div>
 			</div>
-
-		</div>
-
-		<div class = "flex-container-outer">
 			
 			<div class = "flex-container-inner">
 
@@ -76,10 +69,6 @@
 				</div>
 			</div>
 
-		</div>
-
-		<div class = "flex-container-outer">
-
 			<div class = "flex-container-inner">
 				<div class = "where_to">
 					ATL > LAX
@@ -103,7 +92,7 @@
 			</div>
 		</div>
 
-	</div>
+
 
 </body>
 
