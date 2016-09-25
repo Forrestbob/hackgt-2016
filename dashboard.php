@@ -9,18 +9,26 @@
 
 <body>
 
-	<img id = "logo" src="images/delta.png">
+	<a href="http://www.delta.com/"><img id = "logo" src="images/delta.png"></a>
 
-	<div id = "top_right">
-		
+	<div class="sign_out">
+		<a href="login.php">Sign Out</a>
 	</div>
 
-	<div id = "dropdown_menu">
+	<div class="passenger_info">
+		<h3>Passenger Name : Long John Silvers</h3>
+		<h4>Flier Number : 1011010110</h4>
 
+		<h4><span id="smaller_h4">We want to help you to your destination!<br> 
+		You can use your Sky Mile points to request a Lyft Ride down below.<br>
+		</span></h4>
 	</div>
 	
 	<div id = "large_container">
 		<div class = "flex-container-outer">
+
+			<span id= "custom_word">My Flights</span>
+
 			<div class = "flex-container-inner">
 				<div class = "flex-item item1">
 					Ticket Number:
@@ -38,10 +46,133 @@
 					5
 				</div>
 			</div>
-			<div class = "flex-container-inner">2</div>
-			<div class = "flex-container-inner">3</div>
-			<div class = "flex-container-inner">4</div>
-			<div class = "flex-container-inner">5</div>
+			
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+
 		</div>
 	</div>
 

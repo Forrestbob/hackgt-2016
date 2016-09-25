@@ -10,7 +10,7 @@
 
 <body>
 
-	<img id = "logo" src="images/delta.png">
+	<a href="http://www.delta.com/"><img id = "logo" src="images/delta.png"></a>
 
 	<div id = "login_form">
 
