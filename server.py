@@ -52,7 +52,7 @@ def login():
       else:
         user[0]['flights']= [flight]
   session['current_user'] = user
-  return jsonify(session['current_user'])
+  return jsonify(user=session['current_user'])
   
   # set flash error message and redirect to login page
 
@@ -77,9 +77,28 @@ def estimate(index):
 
 @app.route('/search', methods=['POST'])
 def search():
-  return
-#@app.route('/create_ride', methods=['POST'])
-#def create_ride():
+   url='https://maps.googleapis.com/maps/api/geocode/json'
+   textInput = request.form.searchTextField
+   is_sensor= "false"
+   payload = {'address': session['current_user'][0]['flights'][0]['departure'], 'sensor': is_sensor }
+   req = requests.get(url, params=payload)
+   output = req.json()
+
+   results_list = output['results']
+   results_status = output['status']
+
+   lat = results_list[0]['geometry']['location']['lat']
+   lng = results_list[0]['geometry']['location']['lng']
+
+   return lat
+   #return render_template('autocomplete.html')
+@app.route('/create_ride', methods=['POST'])
+def create_ride():
+    return ""
+
+@app.route('/hey')
+def hello():
+  return "yooo"
 
   
 def connect_db():
