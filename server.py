@@ -110,6 +110,7 @@ def search():
   pricing = requests.get('https://api.lyft.com/v1/cost', params=params1,  headers={
         'Authorization': 'Bearer %s' % session['token']
     })
+  print pricing
   pricing = pricing.json()
   for each in pricing['cost_estimates']:
     if each['ride_type'] == 'lyft':
@@ -164,18 +165,17 @@ def step2():
 
 @app.route('/create_ride', methods=['POST'])
 def create_ride():
-  print session['dept_long_lat']['lat']
-  print session['dept_long_lat']['long']
-  print session['dest_long_lat']['lat']
-  print session['dest_long_lat']['long']
   price = request.form['price']
   destination = request.form['destination']
   origin = request.form['origin']
-  params = {'origin':origin, 'destination':destination, 'ride_type':'lyft'}
-  results = requests.post('https://api.lyft.com/v1/rides', params = params,headers={
+  print origin
+  print destination
+  params = {'origin':origin,'destination':destination, 'ride_type':'lyft'}
+  results = requests.post('https://api.lyft.com/v1/rides', params=params,headers={
         'Authorization': 'Bearer %s' % session['token']
     })
   result = results.json()
+  print result
   g.db = connect_db()
   balance = g.db.execute("SELECT FlyerPoints - ? AS BALANCE FROM Flyers WHERE uuid=?", (price,session['current_user'][0]['uuid'],))
   print balance

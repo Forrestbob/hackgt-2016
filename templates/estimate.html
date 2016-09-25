@@ -33,8 +33,8 @@
 				<form action="/create_ride" method="POST">
 					<input type="text" name="price" value="{{pricing}} points" readonly>
 					<input type="text" name="timing" value="{{timing}} seconds" readonly>
-					<input type="hidden" name="origin" value="{{origin}} seconds">
-					<input type="hidden" name="destination" value="{{destination}} seconds" >
+					<input type="hidden" name="origin" value="{{origin}}">
+					<input type="hidden" name="destination" value="{{destination}}" >
 					<input type = "submit" id = "flip" value = "Request Lyft">
 				</form>		
 			{% endif %}		

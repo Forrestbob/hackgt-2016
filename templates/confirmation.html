@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='uber_style.css') }}">
+	<title>Set-Up Uber Ride | Delta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+	<img id = "logo" src="{{ url_for('static', filename='delta.png') }}">
+	
+	<img id = "uber" src = "{{ url_for('static', filename='lyft.png') }}"><br>
+	
+	<div class = "uber-form">
+	
+		<h1>Confirmation</h1>
+		<p>
+			From: {{session['current_user'][0]['flights'][0]['destination']}}
+		</p>
+		<p>
+			To: 
+		</p>
+		<p>
+			Price: {{price}}
+		</p>
+		<p>
+			Status: {{result['status']}}
+		</p>
+		
+		
+	</div>
+	
+
+</body>
+
+
+</html>
