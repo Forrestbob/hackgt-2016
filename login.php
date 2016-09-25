@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="login_style.css">
 	<title>Login | Delta</title>
@@ -7,6 +8,7 @@
 
 
 <body>
+
 	<img id = "logo" src="images/delta.png">
 	
 	<div id = "login_form">

@@ -9,6 +9,11 @@ body {
 	
 }
 
+h1 {
+	color: white;
+	font-family: sans-serif;
+}
+
 #logo {
 	width: 216px;
 	height: 86px;
