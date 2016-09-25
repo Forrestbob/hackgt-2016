@@ -79,13 +79,35 @@ def estimate(index):
   session['dept_long_lat'] = {'long':departure['lng'], 'lat':departure['lat']}
   return render_template('estimate.html', index=index)
 
-@app.route('/search', methods=['POST'])
+@app.route('/search')
 def search():
-  #get long lat of text input
-  #params = {'start_latitude': session['current_user'][0]['flights'][index]['dept_long_lat']['lat'], 'start-longitude':session['current_user'][0]['flights'][index]['dept_long_lat']['long'], 'end_latitude': , 'end_longitude': }
- 
+  url='https://maps.googleapis.com/maps/api/geocode/json'
+  #textInput = request.form['pac-input']
+  is_sensor= "false"
+  payload = {'address': session['current_user'][0]['flights'][0]['departure'], 'sensor': is_sensor }
+  req = requests.get(url, params=payload)
+  output = req.json()
+
+  results_list = output['results']
+  results_status = output['status']
+
+  lat = results_list[0]['geometry']['location']['lat']
+  lng = results_list[0]['geometry']['location']['lng']
+
+  url2= 'https://api.lyft.com/v1/eta'
+
+  locationLat = lat
+  locatiionLng = lat 
+
+
+  #return lat
+
+
+  get long lat of text input
+  params = {'start_latitude': session['current_user'][0]['flights'][index]['dept_long_lat']['lat'], 'start-longitude':session['current_user'][0]['flights'][index]['dept_long_lat']['long'], 'end_latitude': , 'end_longitude': }
   
-  return
+  
+  return render_template("autocomplete.html")
 
 @app.route('/lyft')
 def step1():
