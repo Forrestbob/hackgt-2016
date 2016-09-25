@@ -45,6 +45,9 @@
 				<div class = "flex-item item4">
 					4
 				</div>
+				<div class = "flex-item item5">
+					<a href="uber_setup.php">Set up Pick-up</a>
+				</div>
 			</div>
 
 		</div>
@@ -67,6 +70,9 @@
 				</div>
 				<div class = "flex-item item4">
 					4
+				</div>
+				<div class = "flex-item item5">
+					<a href="uber_setup.php">Set up Pick-up</a>
 				</div>
 			</div>
 
@@ -91,7 +97,7 @@
 					4
 				</div>
 				<div class = "flex-item item5">
-					<a href="uber_setup.php"><img src="images/request_car.png"></a>
+					<a href="uber_setup.php">Set up Pick-up</a>
 				</div>
 
 			</div>

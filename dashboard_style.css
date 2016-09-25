@@ -129,6 +129,32 @@ h4 {
 	flex: 2 100%;
 }
 
+.item5 a {
+	margin-left: 280px;
+    font-size: 100%;
+    padding: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.item5 a:link, .item5 a:visited {
+    color: black;
+    border: 3px solid black;
+	background-color: white;
+    font-size: 12px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.item5 a:hover, .item5 a:active {
+    background-color: black;
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 @media screen and (max-device-width: 768px) {
 	body {
 		margin-top: 500px;
