@@ -68,6 +68,8 @@ p {
 	margin-left: 30px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
 	body {
 		background-image: url("images/white.jpg");
