@@ -42,9 +42,9 @@ def login():
       user[0]['flight_number'] = each['freqFlierNumber']
       flight = dict(
         ticket_number= each['ticketNumber'],
-        departure= "Hartsfield-Jackson Atlanta International Airport",
+        departure= "6000 N Terminal Pkwy, Atlanta, GA 30320",
         departure_time= "Friday August 9, 9:00pm EST",
-        destination= "Los Angeles International Airport",
+        destination= "1 World Way, Los Angeles, CA 90045",
         arrival_time= "Saturday August 10, 12:00am EST"
       )
       if hasattr(user[0], 'flights'):
@@ -61,7 +61,21 @@ def logout():
   session.pop('current_user')
   return redirect('/')
 
-
+@app.route('/estimate/<int:index>')
+def estimate(index):
+  index = 0
+  url='https://maps.googleapis.com/maps/api/geocode/json'
+  params1={'sensor':'false','address': session['current_user'][0]['flights'][index]['destination']}
+  results1 = requests.get(url, params=params1)
+  destination = results1.json()['results'][0]['geometry']['location']
+  session['current_user'][0]['flights'][index]['dest_long_lat'] = {'long':destination['lng'], 'lat':destination['lat']}
+  params2={'sensor':'false','address': session['current_user'][0]['flights'][index]['departure']}
+  results2 = requests.get(url, params=params2)
+  departure = results2.json()['results'][0]['geometry']['location']
+  session['current_user'][0]['flights'][index]['dept_long_lat'] = {'long':departure['lng'], 'lat':departure['lat']}
+  return render_template('estimate.html', index=index)
+#@app.route('/create_ride', methods=['POST'])
+#def create_ride():
 
   
 def connect_db():
