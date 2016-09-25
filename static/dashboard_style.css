@@ -1,0 +1,159 @@
+body {
+
+    background-image: url("dashboard_bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+	background-position: 0px 40px;
+}
+
+h3 {
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+h4 {
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#smaller_h4 {
+	font-size: 85%;
+}
+
+.passenger_info {
+	margin: 0 auto; 
+	margin-top: 100px;
+	background-color: #14397D;
+	color: black;
+	max-width: 500px;
+	align-items: center;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#logo {
+	width: 216px;
+	height: 86px;
+	margin-top: -36px;
+	margin-left: -30px;
+}
+
+.sign_out {
+	font-weight: bold;
+	font-family: sans-serif;
+    position: relative;
+    display: inline-block;
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+
+/* unvisited link */
+.sign_out a:link {
+    text-decoration: none;
+}
+
+/* visited link */
+.sign_out a:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.sign_out a:hover {
+    text-decoration: underline;
+	color: #474EFF;
+}
+
+/* selected link */
+.sign_out a:active {
+    color: #C71818;
+    text-decoration: none;
+}
+
+.flex-container-outer {
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 auto; 
+	margin-top: 40px;
+	display: -webkit-flex; /*safari*/
+	-webkit-justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	max-width: 700px;
+	align-items: center;
+	padding: 20px 20px;
+	border-radius: 10px;
+}
+
+.flex-container-inner {
+	width: 100%;
+	height: 120px;
+	padding: 16px;
+	border-radius: 16px;
+	background-color: white;
+	margin-bottom: 20px;
+	display: -webkit-flex; /*safari*/
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.flex-item {
+	width: 60px;
+	padding: 4px;
+	flex: 1 100%;
+}
+
+.item1 {
+	height: 20px;
+	padding: 2px;
+	border-bottom: solid 1px black;
+}
+
+.item2 {
+	-webkit-align-self: flex-end;
+    align-self: flex-end;
+	flex: 1 6 20%;
+}
+
+.item5 {
+	flex: 2 100%;
+	margin-top: -30px;
+}
+
+.item5 a {
+	margin-left: 290px;
+    font-size: 100%;
+    padding: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.item5 a:link, .item5 a:visited {
+    color: black;
+    border: 3px solid black;
+	background-color: white;
+    font-size: 12px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.item5 a:hover, .item5 a:active {
+    background-color: black;
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (max-device-width: 768px) {
+	body {
+		margin-top: 500px;
+	}
+}
+

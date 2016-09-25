@@ -1,0 +1,58 @@
+
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard_style.css') }}">
+	<title>Dashboard | Delta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+
+<body>
+
+	<a href="http://www.delta.com/"><img id = "logo" src="{{ url_for('static', filename='delta.png') }}"></a>
+
+	<div class="sign_out">
+		<a href="/logout">Sign Out</a>
+	</div>
+
+	<div class="passenger_info">
+		<h3>Passenger Name : {{ session["current_user"][0]["first_name"] }} {{ session["current_user"][0]["last_name"] }} </h3>
+		<h4>Flier Number : {{session["current_user"][0]["flight_number"]}}</h4>
+
+		<h4><span id="smaller_h4">We want to help you to your destination!<br> 
+		You can use your Sky Mile points to request a Lyft Ride down below.<br>
+		</span></h4>
+	</div>
+	
+	<div id = "large_container">
+
+	{% for each in session["current_user"][0]["flights"] %}
+
+		<div class = "flex-container-outer">
+
+			<div class = "flex-container-inner">
+				<div class = "where_to">
+					ATL > LAX
+				</div>
+
+				<div class = "flex-item item1">
+					Flight Number: {{each["ticket_number"]}}
+				</div>
+				<div class = "flex-item item2">
+					Departure Time: {{each["departure_time"]}}
+				</div>
+				<div class = "flex-item item3">
+					Arrival Time: {{each["arrival_time"]}}
+				</div>
+				<div class = "flex-item item5">
+					<a href="/estimate/{{session['current_user'][0]['flights'].index(each)}}">Set Pick-up</a>
+				</div>
+			</div>
+
+		</div>
+
+		{% endfor %}
+
+		
+
+	</div>

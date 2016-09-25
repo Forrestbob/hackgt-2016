@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="dashboard_style.css">
+	<link rel="stylesheet" type="text/css" href="static/dashboard_style.css">
 	<title>Dashboard | Delta</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -24,32 +24,36 @@
 		</span></h4>
 	</div>
 	
-	<div id = "large_container">
+	
 		<div class = "flex-container-outer">
-
-			<span id= "custom_word">My Flights</span>
-
 			<div class = "flex-container-inner">
+				<div class = "where_to">
+					ATL > LAX
+				</div>
 				<div class = "flex-item item1">
-					Ticket Number:
+					Flight Number:
 				</div>
 				<div class = "flex-item item2">
-					Depart
+					Departure Time:
 				</div>
 				<div class = "flex-item item3">
-					3
+					Arrival Time:
 				</div>
 				<div class = "flex-item item4">
 					4
 				</div>
 				<div class = "flex-item item5">
-					5
+					<a href="uber_setup.php">Set Pick-up</a>
 				</div>
 			</div>
 			
 			<div class = "flex-container-inner">
+
+				<div class = "where_to">
+					ATL > LAX
+				</div>
 				<div class = "flex-item item1">
-					Ticket Number:
+					Flight Number:
 				</div>
 				<div class = "flex-item item2">
 					Depart
@@ -61,13 +65,16 @@
 					4
 				</div>
 				<div class = "flex-item item5">
-					5
+					<a href="uber_setup.php">Set Pick-Up</a>
 				</div>
 			</div>
 
 			<div class = "flex-container-inner">
+				<div class = "where_to">
+					ATL > LAX
+				</div>
 				<div class = "flex-item item1">
-					Ticket Number:
+					Flight Number:
 				</div>
 				<div class = "flex-item item2">
 					Depart
@@ -79,102 +86,13 @@
 					4
 				</div>
 				<div class = "flex-item item5">
-					5
+					<a href="uber_setup.php">Set Pick-up</a>
 				</div>
-			</div>
 
-			<div class = "flex-container-inner">
-				<div class = "flex-item item1">
-					Ticket Number:
-				</div>
-				<div class = "flex-item item2">
-					Depart
-				</div>
-				<div class = "flex-item item3">
-					3
-				</div>
-				<div class = "flex-item item4">
-					4
-				</div>
-				<div class = "flex-item item5">
-					5
-				</div>
 			</div>
-
-			<div class = "flex-container-inner">
-				<div class = "flex-item item1">
-					Ticket Number:
-				</div>
-				<div class = "flex-item item2">
-					Depart
-				</div>
-				<div class = "flex-item item3">
-					3
-				</div>
-				<div class = "flex-item item4">
-					4
-				</div>
-				<div class = "flex-item item5">
-					5
-				</div>
-			</div>
-
-			<div class = "flex-container-inner">
-				<div class = "flex-item item1">
-					Ticket Number:
-				</div>
-				<div class = "flex-item item2">
-					Depart
-				</div>
-				<div class = "flex-item item3">
-					3
-				</div>
-				<div class = "flex-item item4">
-					4
-				</div>
-				<div class = "flex-item item5">
-					5
-				</div>
-			</div>
-
-			<div class = "flex-container-inner">
-				<div class = "flex-item item1">
-					Ticket Number:
-				</div>
-				<div class = "flex-item item2">
-					Depart
-				</div>
-				<div class = "flex-item item3">
-					3
-				</div>
-				<div class = "flex-item item4">
-					4
-				</div>
-				<div class = "flex-item item5">
-					5
-				</div>
-			</div>
-
-			<div class = "flex-container-inner">
-				<div class = "flex-item item1">
-					Ticket Number:
-				</div>
-				<div class = "flex-item item2">
-					Depart
-				</div>
-				<div class = "flex-item item3">
-					3
-				</div>
-				<div class = "flex-item item4">
-					4
-				</div>
-				<div class = "flex-item item5">
-					5
-				</div>
-			</div>
-
 		</div>
-	</div>
+
+
 
 </body>
 

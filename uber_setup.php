@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="uber_style.css">
+	<link rel="stylesheet" type="text/css" href="static/uber_style.css">
 	<title>Set-Up Uber Ride | Delta</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<script src="jquery-1.12.4.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
