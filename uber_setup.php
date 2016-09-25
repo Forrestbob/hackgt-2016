@@ -23,7 +23,7 @@
 	
 	<div class = "uber-form">
 	
-		<form action = "uber_setup.php" method = "POST">
+		<form action = "confirm.html" method = "POST">
 			Enter Pickup Location:<br>
 			<input type = "text" value = "AIRPORT ADDRESS" readonly><br>
 			Enter Destination:<br>
