@@ -3,16 +3,13 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='uber_style.css') }}">
 	<title>Set-Up Uber Ride | Delta</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<script src="jquery-1.12.4.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#flip").click(function(){
-                $("#panel").slideDown("medium");
-            });
-        });
-    </script>
+	
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0klpkL-YhN2UdBitIX3Wlg8SENVhdahU&libraries=places&callback=initMapasyncdefer"></script>
-
+    <style>
+    	#panel{
+    		display:{{session['hide_or_show']}};
+    	}
+    </style>
 
 </head>
 
@@ -25,22 +22,25 @@
 	
 		<form action = "/search" method = "POST">
 			Enter Pickup Location:<br>
-			<input type = "text" value="{{ session['current_user'][0]['flights'][index]['destination'] }}" readonly><br>
+			<input type = "text" value="{{session['current_user'][0]['flights'][0]['destination']}}" readonly><br>
 			Enter Destination:<br>
 			<input id="pac-input" name='destination' type="text" placeholder="To">
 			
-			<input type = "button" id = "flip" value = "Submit">
-			
+			<input type = "submit" id = "flip" value = "Submit">
+			</form>
 			<div id = "panel">
+			{% if pricing != null %}
 				<form action="/create_ride" method="POST">
-					<input type="text" name="price" value="" readonly>
-					<input type="text" name="origin" value="" readonly>
-					<input type="text" name="destination" value="" readonly>
+					<input type="text" name="price" value="{{pricing}} points" readonly>
+					<input type="text" name="timing" value="{{timing}} seconds" readonly>
+					<input type="hidden" name="origin" value="{{origin}} seconds">
+					<input type="hidden" name="destination" value="{{destination}} seconds" >
 					<input type = "submit" id = "flip" value = "Request Lyft">
-				</form>				
+				</form>		
+			{% endif %}		
 			</div>
 		
-		</form>
+		
 		
 	</div>
 	<a href={{login}}> log in</a>

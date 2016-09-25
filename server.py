@@ -77,14 +77,16 @@ def estimate(index):
   results2 = requests.get(url, params=params2)
   departure = results2.json()['results'][0]['geometry']['location']
   session['dept_long_lat'] = {'long':departure['lng'], 'lat':departure['lat']}
+  session['hide_or_show'] = "hidden"
   return render_template('estimate.html', index=index)
 
-@app.route('/search')
+@app.route('/search', methods=['POST'])
 def search():
   url='https://maps.googleapis.com/maps/api/geocode/json'
   #textInput = request.form['pac-input']
+  session['objective'] = request.form['destination']
   is_sensor= "false"
-  payload = {'address': session['current_user'][0]['flights'][0]['departure'], 'sensor': is_sensor }
+  payload = {'address': request.form['destination'], 'sensor': is_sensor }
   req = requests.get(url, params=payload)
   output = req.json()
 
@@ -93,21 +95,34 @@ def search():
 
   lat = results_list[0]['geometry']['location']['lat']
   lng = results_list[0]['geometry']['location']['lng']
-
+  destination = {'lat':lat, 'lng':lng}
+  origin = {'lat': session['dept_long_lat']['lat'], 'lng': session['dept_long_lat']['long']}
   url2= 'https://api.lyft.com/v1/eta'
-
-  locationLat = lat
-  locatiionLng = lat 
 
 
   #return lat
-
-
-  get long lat of text input
-  params = {'start_latitude': session['current_user'][0]['flights'][index]['dept_long_lat']['lat'], 'start-longitude':session['current_user'][0]['flights'][index]['dept_long_lat']['long'], 'end_latitude': , 'end_longitude': }
-  
-  
-  return render_template("autocomplete.html")
+  params1 = {'start_lat': session['dept_long_lat']['lat'], 'start_lng':session['dept_long_lat']['long'], 'end_lat': lat , 'end_lng': lng }
+  params2 = {'lat': session['dept_long_lat']['lat'], 'lng':session['dept_long_lat']['long']}
+  timing = requests.get('https://api.lyft.com/v1/eta', params=params2,headers={
+        'Authorization': 'Bearer %s' % session['token']
+    })
+  timing = timing.json()
+  pricing = requests.get('https://api.lyft.com/v1/cost', params=params1,  headers={
+        'Authorization': 'Bearer %s' % session['token']
+    })
+  pricing = pricing.json()
+  for each in pricing['cost_estimates']:
+    if each['ride_type'] == 'lyft':
+      pricing = int(each['estimated_cost_cents_max'])
+  print timing
+  for each in timing['eta_estimates']:
+    if each['ride_type'] == 'lyft':
+      timing = int(each['eta_seconds'])
+ 
+  session['hide_or_show']='block'
+  print pricing
+  print timing
+  return render_template("estimate.html", pricing=pricing, timing=timing, origin=origin, destination=destination)
 
 @app.route('/lyft')
 def step1():
@@ -153,12 +168,18 @@ def create_ride():
   print session['dept_long_lat']['long']
   print session['dest_long_lat']['lat']
   print session['dest_long_lat']['long']
-  price = int(request.form['price'])
+  price = request.form['price']
   destination = request.form['destination']
   origin = request.form['origin']
   params = {'origin':origin, 'destination':destination, 'ride_type':'lyft'}
-  result = requests.post('https://api.lyft.com/v1/rides', params = params)
-  _id = result.json()['ride_id']
+  results = requests.post('https://api.lyft.com/v1/rides', params = params,headers={
+        'Authorization': 'Bearer %s' % session['token']
+    })
+  result = results.json()
+  g.db = connect_db()
+  balance = g.db.execute("SELECT FlyerPoints - ? AS BALANCE FROM Flyers WHERE uuid=?", (price,session['current_user'][0]['uuid'],))
+  print balance
+  return render_template('confirmation.html', price=price, result=result, balance=balance)
   
 
   
