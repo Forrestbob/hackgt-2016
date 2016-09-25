@@ -5,7 +5,6 @@ body {
     background-repeat: no-repeat;
 	
 	background-position: 0px 40px;
-	
 }
 
 #logo {
@@ -62,4 +61,20 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #7EAEED;
     color: white;
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		background-image: url("images/white.jpg");
+		background-color: #000066;
+		background-size: 100% 40px;
+		background-position: 0 0;
+
+	}
+	
+	#logo {
+		margin: 0 auto;
+		margin-top: -36px;
+		display: block;
+	}
 }
