@@ -77,6 +77,18 @@ def estimate(index):
 
 @app.route('/search', methods=['POST'])
 def search():
+  #get long lat of text input
+  params = {'start_latitude': session['current_user'][0]['flights'][index]['dept_long_lat']['lat'], 'start-longitude':session['current_user'][0]['flights'][index]['dept_long_lat']['long'], 'end_latitude': , 'end_longitude': }
+  server_token = 'ZY-pWsbJWc_bliKFKjZO3QNcNnjmbc03DKR339CE'
+  url = 'https://api.uber.com/v1/estimates/price'
+  response = requests.get(
+    url,
+    params=params,
+    headers={
+        'Authorization': 'Bearer %s' % server_token
+    }
+  )
+  
   return
 #@app.route('/create_ride', methods=['POST'])
 #def create_ride():
