@@ -19,10 +19,10 @@
 <body>
 	<img id = "logo" src="images/delta.png">
 	
+	<img id = "uber" src = "images/lyft.png"><br>
+	
 	<div class = "uber-form">
 	
-		<img id = "uber" src = "images/uber-full.png"><br>
-		
 		<form action = "uber_setup.php" method = "POST">
 			Enter Pickup Location:<br>
 			<input type = "text" value = "AIRPORT ADDRESS" readonly><br>
@@ -33,6 +33,8 @@
 			
 			<div id = "panel">
 				BLAH
+				map here
+				<input type = "submit" id = "flip" value = "Request Lyft">
 			</div>
 		
 		</form>
