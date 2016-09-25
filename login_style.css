@@ -5,7 +5,6 @@ body {
     background-repeat: no-repeat;
 	
 	background-position: 0px 40px;
-	
 }
 
 #logo {
@@ -15,6 +14,15 @@ body {
 	margin-left: -30px;
 }
 
+#cloud_animation1 {
+    float: right;
+    clear: both;
+    position: relative;
+    z-index: -1;
+}
+
+
+
 #login_form {
 	background-color:rgba(255, 255, 255, 0.7);
 	margin: auto;
@@ -23,6 +31,7 @@ body {
 	border-radius: 5px;
 	padding: 20px;
 	font-family: sans-serif;
+    z-index: 1;
 }
 
 #custom_word {
@@ -62,4 +71,20 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #7EAEED;
     color: white;
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		background-image: url("images/white.jpg");
+		background-color: #000066;
+		background-size: 100% 40px;
+		background-position: 0 0;
+
+	}
+	
+	#logo {
+		margin: 0 auto;
+		margin-top: -36px;
+		display: block;
+	}
 }

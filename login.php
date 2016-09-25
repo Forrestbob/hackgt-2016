@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="login_style.css">
 	<title>Login | Delta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 
 <body>
-	<img id = "logo" src="images/delta.png">
-	
+
+	<a href="http://www.delta.com/"><img id = "logo" src="images/delta.png"></a>
+
 	<div id = "login_form">
 
 		<form action="login.php"  method = "GET">
@@ -26,6 +29,10 @@
 			
 			<input type = "submit" name = "submit" value = "Log in">
 		</form>
+	</div>
+
+	<div id = "cloud_animation1">
+		<marquee direction="left" scrolldelay="300"><img id = "cloud" src="images/cloud.png">
 	</div>
 	
 </body>

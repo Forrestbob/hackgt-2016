@@ -1,0 +1,60 @@
+
+body {
+	background-image: url("images/delta_mainbg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+	background-position: 0px 40px;
+}
+
+#logo {
+	width: 216px;
+	height: 86px;
+	margin-top: -36px;
+	margin-left: -30px;
+}
+
+#uber {
+	max-width: 200px;
+	margin: 0 auto;
+	display: block;
+	clear: both;
+}
+
+.uber-form {
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 500px;
+	border-radius: 5px;
+	padding: 20px;
+	font-family: sans-serif;
+}
+
+input[type=text]{ 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button], input[type=submit] {
+    width: 100%;
+    background-color: #ff0066;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+    background-color: #ff4d94;
+    color: white;
+}
+
+#panel {
+	display: none;
+}
