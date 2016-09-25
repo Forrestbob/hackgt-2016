@@ -45,7 +45,7 @@
 					Arrival Time: {{each["arrival_time"]}}
 				</div>
 				<div class = "flex-item item5">
-					<a href="/estimate/">Set Pick-up</a>
+					<a href="/estimate/{{session['current_user'][0]['flights'].index(each)}}">Set Pick-up</a>
 				</div>
 			</div>
 
