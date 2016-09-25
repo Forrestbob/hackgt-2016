@@ -8,7 +8,12 @@
 
 
 <body>
+
 	<img id = "logo" src="images/delta.png">
+
+	<div id = "top_right">
+		
+	</div>
 
 	<div id = "dropdown_menu">
 
