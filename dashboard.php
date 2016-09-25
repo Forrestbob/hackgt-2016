@@ -14,15 +14,29 @@
 
 	</div>
 	
-	<h1>Dashboard</h1>
-	
 	<div id = "large_container">
-		<div class = "flex-container">
-			<div class = "flex-item">1</div>
-			<div class = "flex-item">2</div>
-			<div class = "flex-item">3</div>
-			<div class = "flex-item">4</div>
-			<div class = "flex-item">5</div>
+		<div class = "flex-container-outer">
+			<div class = "flex-container-inner">
+				<div class = "flex-item item1">
+					Ticket Number:
+				</div>
+				<div class = "flex-item item2">
+					Depart
+				</div>
+				<div class = "flex-item item3">
+					3
+				</div>
+				<div class = "flex-item item4">
+					4
+				</div>
+				<div class = "flex-item item5">
+					5
+				</div>
+			</div>
+			<div class = "flex-container-inner">2</div>
+			<div class = "flex-container-inner">3</div>
+			<div class = "flex-container-inner">4</div>
+			<div class = "flex-container-inner">5</div>
 		</div>
 	</div>
 
