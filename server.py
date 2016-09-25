@@ -170,14 +170,22 @@ def create_ride():
   origin = request.form['origin']
   print origin
   print destination
-  params = {'origin':origin,'destination':destination, 'ride_type':'lyft'}
+  lyft='lyft'
+
+  params=dict( ride_type =lyft, origin=origin ,destination=destination)
+ 
+  
   results = requests.post('https://api.lyft.com/v1/rides', params=params,headers={
         'Authorization': 'Bearer %s' % session['token']
     })
+
+
+
   result = results.json()
   print result
   g.db = connect_db()
   balance = g.db.execute("SELECT FlyerPoints - ? AS BALANCE FROM Flyers WHERE uuid=?", (price,session['current_user'][0]['uuid'],))
+  balance = [dict(points= row[0]) for row in balance.fetchall()]
   print balance
   return render_template('confirmation.html', price=price, result=result, balance=balance)
   
