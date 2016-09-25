@@ -11,7 +11,7 @@
 <body>
 
 	<img id = "logo" src="images/delta.png">
-	
+
 	<div id = "login_form">
 
 		<form action="login.php"  method = "GET">
@@ -29,6 +29,10 @@
 			
 			<input type = "submit" name = "submit" value = "Log in">
 		</form>
+	</div>
+
+	<div id = "cloud_animation1">
+		<marquee direction="left" scrolldelay="300"><img id = "cloud" src="images/cloud.png">
 	</div>
 	
 </body>
