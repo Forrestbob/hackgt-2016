@@ -74,12 +74,16 @@ def estimate(index):
   departure = results2.json()['results'][0]['geometry']['location']
   session['current_user'][0]['flights'][index]['dept_long_lat'] = {'long':departure['lng'], 'lat':departure['lat']}
   return render_template('estimate.html', index=index)
+
+@app.route('/search', methods=['POST'])
+def search():
+  return
 #@app.route('/create_ride', methods=['POST'])
 #def create_ride():
 
   
 def connect_db():
-        return sqlite3.connect(app.database)
+  return sqlite3.connect(app.database)
 
 if __name__ == '__main__':
     app.run(debug=True) 
