@@ -55,7 +55,8 @@ def login():
       else:
         user[0]['flights']= [flight]
   session['current_user'] = user
-  return jsonify(session['current_user'])
+  data = jsonify(session['current_user'])
+  return render_template('dashboard.html', data=data)
   
   # set flash error message and redirect to login page
 
