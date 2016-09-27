@@ -16,7 +16,7 @@ Upon loggin in, our app look up the gets the from the Delta api. Some of the inf
 	<li><h2>Lawrence Chen</h2>
 		<p>Helped write the front end. He did the moving cloud animation in the login animation (it's really suttle. Look at the very bottom of the page). He also photoshopped the background images to make them look perfect</p>
 	</li>
-	<li><h2>Forest Wong</h2>
+	<li><h2>Forrest Wong</h2>
 	<p>Helped write the front end. He wrote most of the media queries to make the site responsive. It is important to not that this was Forest's first time working with html and css</p>
 	</li>
 	<li><h2>Jay Brooks</h2>
