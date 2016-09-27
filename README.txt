@@ -25,3 +25,4 @@ Upon loggin in, our app look up the gets the from the Delta api. Some of the inf
 	<li><h2>Mitchell Lee</h2>
 	<p>Wrote the controller. Did most of the api communication. Got users from Delta api. Geocoded the origin airport and destination airport addresses using the google geocoding api. Got price and time estimates from the lyft api. </p>
 	</li>
+</ul>
