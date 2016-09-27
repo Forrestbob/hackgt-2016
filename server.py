@@ -137,7 +137,7 @@ def step1():
      )
   parameters = {
     'response_type': 'code',
-    'redirect_uri':'https://1d96fd3c.ngrok.io/step2',
+    'redirect_uri':'https://3bf8ae07.ngrok.io/step2',
     'scope': 'rides.request profile rides.read public',
     'client_id':'TgLMk7SiXddO',
     'state':{}
@@ -149,7 +149,7 @@ def step1():
 @app.route('/step2', methods=['GET'])
 def step2():
   parameters = {
-    'redirect_uri':'https://1d96fd3c.ngrok.io/step2',
+    'redirect_uri':'https://3bf8ae07.ngrok.io/step2',
     'code': request.args.get('code'),
     'grant_type': 'authorization_code'
     }
